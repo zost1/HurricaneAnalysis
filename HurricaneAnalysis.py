@@ -37,7 +37,7 @@ damages_clean = mmbb_to_float(damages)
 
 # write your construct hurricane dictionary function here:
 def hurricane_dict(name_list, month_list, year_list, wind_list, area_list, damage_list, death_list):
-    hurricanes = {}  
+    hurricanes = {}
     for i in range(len(name_list)):
         details = {}
         details['Name'] = name_list[i]
@@ -58,11 +58,11 @@ def hurricane_year(hurricane_dict):
     year_dict = {}
     for name in hurricane_data:
         y = hurricane_data[name]['Year']
-        
+
         if year_dict.get(y) == None:
             l = [hurricane_data[name]]
             year_dict[y] = l
-        
+
         else:
             e = year_dict[y]
             e.append(hurricane_data[name])
@@ -115,10 +115,10 @@ def mortality_categories(h_dict):
     list3 = []
     list4 = []
     list5 = []
-        
+
     mort_cat = {'0':list0,'1':list1,'2':list2,'3':list3,'4':list4,'5':list5}
     h_dict = hurricane_data
-    
+
     for hurricane in h_dict:
         deaths = h_dict[hurricane]['Death']
         #print(deaths)
@@ -157,7 +157,7 @@ def greatest_damage(h_dict):
 
 max_damage = greatest_damage(hurricane_data)
 #print(max_damage)
-            
+
 # write your catgeorize by damage function here:
 def damage_categories(h_dict):
     list0 = []
@@ -166,10 +166,9 @@ def damage_categories(h_dict):
     list3 = []
     list4 = []
     list5 = []
-        
+
     damage_cat = {'0':list0,'1':list1,'2':list2,'3':list3,'4':list4,'5':list5}
-    h_dict = hurricane_data
-    
+
     for hurricane in h_dict:
         damage = h_dict[hurricane]['Damage']
         if damage == 'Damages not recorded':
