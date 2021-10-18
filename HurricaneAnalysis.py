@@ -117,7 +117,6 @@ def mortality_categories(h_dict):
     list5 = []
 
     mort_cat = {'0':list0,'1':list1,'2':list2,'3':list3,'4':list4,'5':list5}
-    h_dict = hurricane_data
 
     for hurricane in h_dict:
         deaths = h_dict[hurricane]['Death']
